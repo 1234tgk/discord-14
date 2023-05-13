@@ -6,6 +6,12 @@ By 1234tgk (Taehyeon Kim)
 
 -   TypeScript
 -   discord.js
--   Docker (WIP)
+-   Docker
 -   React.js (WIP)
 -   Node.js + Express.js (WIP)
+
+## How To Run The Application(s) Through Docker
+
+-   `docker-compose build` to build docker images
+-   `docker-compose up -d` to run the container in the background
+-   `docker-compose down` to stop the container
