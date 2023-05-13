@@ -1,0 +1,10 @@
+{
+    "name": "discord-typescript",
+    "version": "0.1.0",
+    "description": "Discord bot created with discord.js and TypeScript. Admin panel created with React.js and Express.js.",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Taehyeon Kim",
+    "license": "ISC"
+}
