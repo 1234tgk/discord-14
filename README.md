@@ -8,4 +8,4 @@ By 1234tgk (Taehyeon Kim)
 -   discord.js
 -   Docker (WIP)
 -   React.js (WIP)
--   Node.js + Express.js
+-   Node.js + Express.js (WIP)
