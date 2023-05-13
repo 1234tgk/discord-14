@@ -6,6 +6,6 @@ By 1234tgk (Taehyeon Kim)
 
 -   TypeScript
 -   discord.js
--   Docker (WIP)
+-   Docker
 -   React.js (WIP)
 -   Node.js + Express.js (WIP)
