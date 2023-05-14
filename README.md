@@ -9,6 +9,7 @@ By 1234tgk (Taehyeon Kim)
 -   Docker
 -   React.js (WIP)
 -   Node.js + Express.js (WIP)
+-   MySQL + Prisma ORM (WIP)
 
 ## How To Run The Application(s) Through Docker
 
