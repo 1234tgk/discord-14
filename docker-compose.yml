@@ -10,6 +10,15 @@ services:
     env_file:
       - ./discord/.env
     command: npm run --prefix ./discord dev
+  server:
+    container_name: server
+    build:
+      context: .
+      dockerfile: ./server/Dockerfile
+      target: base
+    env_file:
+      - ./server/.env
+    command: npm run --prefix ./server dev
   db:
     container_name: db
     image: mysql:8.0.33
