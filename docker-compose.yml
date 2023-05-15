@@ -7,8 +7,6 @@ services:
             context: .
             dockerfile: ./discord/Dockerfile
             target: base
-        volumes:
-            - ./discord/src:/home/discord/app/src
         env_file:
             - ./discord/.env
         command: npm run --prefix ./discord dev
