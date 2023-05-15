@@ -5,7 +5,7 @@ import config from './config';
 console.log('Bot is starting...');
 
 const client = new Client({
-    intents: [],
+  intents: [],
 });
 
 // Initialize Listeners

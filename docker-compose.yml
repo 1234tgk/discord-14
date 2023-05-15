@@ -1,25 +1,25 @@
 version: '3'
 
 services:
-    discord:
-        container_name: discord
-        build:
-            context: .
-            dockerfile: ./discord/Dockerfile
-            target: base
-        env_file:
-            - ./discord/.env
-        command: npm run --prefix ./discord dev
-    db:
-        container_name: db
-        image: mysql:8.0.33
-        ports:
-            - 3306:3306
-        volumes:
-            - db-data:/var/lib/mysql
-        environment:
-            - MYSQL_DATABASE=discord-bot-db
-            - MYSQL_ROOT_PASSWORD=password
+  discord:
+    container_name: discord
+    build:
+      context: .
+      dockerfile: ./discord/Dockerfile
+      target: base
+    env_file:
+      - ./discord/.env
+    command: npm run --prefix ./discord dev
+  db:
+    container_name: db
+    image: mysql:8.0.33
+    ports:
+      - 3306:3306
+    volumes:
+      - db-data:/var/lib/mysql
+    environment:
+      - MYSQL_DATABASE=discord-bot-db
+      - MYSQL_ROOT_PASSWORD=password
 
 volumes:
-    db-data:
+  db-data:
