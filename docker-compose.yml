@@ -1,4 +1,4 @@
-version: '3'
+version: '3.9'
 
 services:
   discord:
@@ -7,6 +7,9 @@ services:
       context: .
       dockerfile: ./discord/Dockerfile
       target: base
+    depends_on:
+      db:
+        condition: service_healthy
     env_file:
       - ./discord/.env
     command: npm run --prefix ./discord dev
@@ -16,6 +19,9 @@ services:
       context: .
       dockerfile: ./server/Dockerfile
       target: base
+    depends_on:
+      db:
+        condition: service_healthy
     env_file:
       - ./server/.env
     command: npm run --prefix ./server dev
@@ -27,8 +33,14 @@ services:
     volumes:
       - db-data:/var/lib/mysql
     environment:
-      - MYSQL_DATABASE=discord-bot-db
+      - MYSQL_DATABASE=discord_bot_db
       - MYSQL_ROOT_PASSWORD=password
+    healthcheck:
+      test: mysqladmin ping -h 127.0.0.1 -u root -ppassword
+      start_period: 5s
+      interval: 5s
+      timeout: 5s
+      retries: 55
 
 volumes:
   db-data:

@@ -11,6 +11,10 @@ By 1234tgk (Taehyeon Kim)
 - Node.js + Express.js (WIP)
 - MySQL + Prisma ORM (WIP)
 
+## Prerequisite Libraries
+
+- MySQL
+
 ## How To Run The Application(s) Through Docker
 
 - `docker-compose build` to build docker images
